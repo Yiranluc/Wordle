@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Wordle from './Wordle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* change to nav page */}
+    <Wordle />
   </React.StrictMode>,
   document.getElementById('root')
 )
