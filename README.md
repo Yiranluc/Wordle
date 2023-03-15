@@ -2,17 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to run this project
 
-In the project directory, you can run:
+In the project directory, run follow scripts:
 
-### `npm start`
+### `npm install -g json-server`
+Install json server for load English words dictionary.
+
+### `json-server ./dataset/db_normal.json --port 3001`
+Start the json server and load the English words dictionary.
+
+### `npm install`
+Install all relative dependencies.
+
+### `npm run`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Other Available Scripts
 
 ### `npm test`
 
