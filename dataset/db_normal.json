@@ -1,19 +1,19 @@
 {
     "solutions": [
-      {"id": 1, "word": "should"},
-      {"id": 2, "word": "people"},
-      {"id": 3, "word": "before"},
-      {"id": 4, "word": "during"},
-      {"id": 5, "word": "little"},
-      {"id": 6, "word": "system"},
-      {"id": 7, "word": "number"},
-      {"id": 8, "word": "states"},
-      {"id": 9, "word": "social"},
-      {"id": 10, "word": "within"},
-      {"id": 11, "word": "public"},
-      {"id": 12, "word": "called"},
-      {"id": 13, "word": "second"},
-      {"id": 14, "word": "though"},
-      {"id": 15, "word": "always"}
+      "should",
+      "people",
+      "before",
+      "during",
+      "little",
+      "system",
+      "number",
+      "states",
+      "social",
+      "within",
+      "public",
+      "called",
+      "second",
+      "though",
+      "always"
     ]
   }
