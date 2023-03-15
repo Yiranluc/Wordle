@@ -11,12 +11,20 @@ const useWordle = (solution, difficulty, gameRound) => {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:3001/solutions')
-      .then(res => res.json())
-      .then(json => {
-        // random int between 0 & 14
-        setSolutions(json)
-      })
+    if (difficulty === 6) {
+      fetch('http://localhost:3001/normal')
+        .then(res => res.json())
+        .then(json => {
+          setSolutions(json)
+        })
+    }
+    if (difficulty === 7) {
+      fetch('http://localhost:3001/hard')
+        .then(res => res.json())
+        .then(json => {
+          setSolutions(json)
+        })
+    }
   }, [setSolutions])
 
   // format a guess into an array of letter objects with the ckeck result
