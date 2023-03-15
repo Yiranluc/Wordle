@@ -9,7 +9,7 @@ In the project directory, run follow scripts:
 ### `npm install -g json-server`
 Install json server for load English words dictionary.
 
-### `json-server ./dataset/db_normal.json --port 3001`
+### `json-server ./dataset/db.json --port 3001`
 Start the json server and load the English words dictionary.
 
 ### `npm install`
