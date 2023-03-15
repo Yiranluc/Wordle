@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 
-const useWordle = (solution) => {
-  const [time, setTime] = useState(0) // how many time the user guesses
+const useWordle = (solution, difficulty, gameRound) => {
+  const [solutions, setSolutions] = useState(null)
+  const [round, setRound] = useState(0) // how many time the user guesses
   const [currentGuess, setCurrentGuess] = useState('') // 
-  const [guesses, setGuesses] = useState([]) // each guess is an array with check result
+  const [guesses, setGuesses] = useState([...Array(gameRound)]) // each guess is an array with check result
   const [history, setHistory] = useState([]) // each guess is a string
   const [isCorrect, setIsCorrect] = useState(false) // 
+  
   const [message, setMessage] = useState('')
 
-  const [solutions, setSolutions] = useState(null)
-  
   useEffect(() => {
     fetch('http://localhost:3001/solutions')
       .then(res => res.json())
@@ -47,19 +47,37 @@ const useWordle = (solution) => {
     return formattedGuess
   }
 
-  // add a new guess to the guesses state and add one to time state
-  const addNewGuess = () => {
-
+  // add a new guess to the guesses state and add one to round state
+  const addNewGuess = (formattedGuess) => {
+    if (currentGuess === solution) {
+      // mark user win the game
+      setIsCorrect(true)
+    }
+    // update the guess result history
+    setGuesses((preGuesses) => {
+      let newGuesses = [...preGuesses]
+      newGuesses[round] = formattedGuess
+      return newGuesses
+    })
+    // update the guess history
+    setHistory((preHistory) => {
+      return[...preHistory, currentGuess]
+    })
+    // update round counter
+    setRound((preRound) => {
+      return preRound+1
+    })
+    // set current guess to empty
+    setCurrentGuess('')
   }
 
   // track user input and current guess
   // if user presses enter, add the new guess
   const userInput = ({ key }) => {
-    console.log('key pressed - ', key)
     // only letters, Enter and Backspace works
     if (key == 'Enter') {
-      // no more than max guesses time
-      if (time > 6) {
+      // no more than max guesses rounds
+      if (round > gameRound) {
         console.log("You used all your guesses")
         return
       }
@@ -69,27 +87,23 @@ const useWordle = (solution) => {
         return
       }
       // no too long ro too short
-      if (currentGuess.length < 6) {
+      if (currentGuess.length < difficulty) {
         console.log("Your guess is too short, word must be 6 characters long")
         return
       }
-      if (currentGuess.length > 6) {
+      if (currentGuess.length > difficulty) {
         console.log("Your guess is too long, word must be 6 characters long")
         return
       }
 
       // check if current guess is a valid word
       if (!solutions.includes(currentGuess)) {
-        console.log(currentGuess)
-        console.log(solution)
-        console.log(solutions)
         console.log("Your guess is not a valid word")
         return
       }
       
-      const formattedSolution = submitGuess()
-      console.log(solution)
-      console.log(formattedSolution)
+      const formattedGuess = submitGuess()
+      addNewGuess(formattedGuess)
     }
 
     
@@ -99,13 +113,11 @@ const useWordle = (solution) => {
     }
 
     if (/^[A-Za-z]$/.test(key)) {
-      
       setCurrentGuess(prev => prev + key)
-      
     }
   }
 
-  return {time, currentGuess, guesses, isCorrect, userInput}
+  return {round, currentGuess, guesses, isCorrect, userInput}
 }
 
 export default useWordle

@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
-import Wordle_N from './components/Wordle_N'
+import Wordle_Game from './components/Wordle_Com'
 
-function Wordle() {
+function Wordle_N() {
   const [solution, setSolution] = useState(null)
+  const [difficulty, setDifficulty] = useState(6)
+  const [gameRound, setGameRound] = useState(6)
+
   
   useEffect(() => {
     fetch('http://localhost:3001/solutions')
@@ -17,9 +20,9 @@ function Wordle() {
   return (
     <div className="App">
       <h1>Wordle -  Yiran Wang, Bingfan Tian</h1>
-      {solution && <Wordle_N solution={solution} />}
+      {solution && <Wordle_Game solution={solution} difficulty={difficulty} gameRound = {gameRound}/>}
     </div>
   )
 }
 
-export default Wordle
+export default Wordle_N
