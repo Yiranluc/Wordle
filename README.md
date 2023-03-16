@@ -15,7 +15,7 @@ Start the json server and load the English words dictionary.
 ### `npm install`
 Install all relative dependencies.
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
