@@ -77,6 +77,7 @@ const useWordle = (solution, difficulty, gameRound) => {
     })
     // set current guess to empty
     setCurrentGuess('')
+    setMessage('')
   }
 
   // track user input and current guess
@@ -86,27 +87,27 @@ const useWordle = (solution, difficulty, gameRound) => {
     if (key == 'Enter') {
       // no more than max guesses rounds
       if (round > gameRound) {
-        console.log("You used all your guesses")
+        setMessage("You used all your guesses");
         return
       }
       // no duplicate guess
       if (history.includes(currentGuess)) {
-        console.log("You already tried this word")
+        setMessage("You already tried this word");
         return
       }
       // no too long ro too short
       if (currentGuess.length < difficulty) {
-        console.log("Your guess is too short, word must be 6 characters long")
+        setMessage("Your guess is too short, word must be " + difficulty +  " characters long");
         return
       }
       if (currentGuess.length > difficulty) {
-        console.log("Your guess is too long, word must be 6 characters long")
+        setMessage("Your guess is too long, word must be " + difficulty +  " characters long");
         return
       }
 
       // check if current guess is a valid word
       if (!solutions.includes(currentGuess)) {
-        console.log("Your guess is not a valid word")
+        setMessage("Your guess is not a valid word");
         return
       }
       
@@ -125,7 +126,7 @@ const useWordle = (solution, difficulty, gameRound) => {
     }
   }
 
-  return {round, currentGuess, guesses, isCorrect, userInput}
+  return {round, currentGuess, guesses, isCorrect, message,userInput}
 }
 
 export default useWordle

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import Wordle_Game from './components/Wordle_Com'
 
-function Wordle_N() {
+function Wordle_H() {
   const [solution, setSolution] = useState(null)
-  const [difficulty, setDifficulty] = useState(6)
-  const [gameRound, setGameRound] = useState(6)
+  const [difficulty, setDifficulty] = useState(7)
+  const [gameRound, setGameRound] = useState(5)
 
   useEffect(() => {
     if (difficulty === 6) {
@@ -35,4 +35,4 @@ function Wordle_N() {
   )
 }
 
-export default Wordle_N
+export default Wordle_H
