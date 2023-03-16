@@ -2,10 +2,6 @@ import React from "react";
 
 export default function Row({guess, difficulty}) {
 
-    if (difficulty === 6) {
-
-    }
-
     if (guess) {
         return (
             <div className="row past">
