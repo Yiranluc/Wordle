@@ -27,7 +27,7 @@
     white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 18px;
-    padding: 10px;
+    margin: 10px;
 }
 
 .button:focus {
