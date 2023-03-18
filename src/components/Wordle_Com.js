@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import useWordle from '../hooks/Wordle_Hooks'
 import End from './End'
 import Grid from './Grid'
+import Button from './Button'
 
 export default function Wordle({ solution, difficulty, gameRound }) {
   const { round, currentGuess, guesses, isCorrect, message, userInput } = useWordle(solution, difficulty, gameRound)
@@ -27,10 +28,10 @@ export default function Wordle({ solution, difficulty, gameRound }) {
   //   console.log(round, guesses, isCorrect)
   // }, [guesses, round, isCorrect])
 
-
   return (
     <div>
       <h3>Current Guess - {currentGuess}</h3>
+      <Button id='resetButton' onClick={() => window.location.reload(false)}> Restart a game </Button>
       {message && <p className='message'> {message} </p>}
       <Grid currentGuess = {currentGuess} guesses = {guesses} round = {round} difficulty={difficulty}/>
       {endGame && <End isCorrect = {isCorrect} round = {round} solution = {solution}/>}

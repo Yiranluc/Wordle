@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import Wordle_Game from './components/Wordle_Com'
+import Wordle_Game from '../components/Wordle_Com'
+import { Link } from 'react-router-dom';
 
-function Wordle_N() {
+function Wordle_H() {
   const [solution, setSolution] = useState(null)
-  const [difficulty, setDifficulty] = useState(6)
-  const [gameRound, setGameRound] = useState(6)
+  const [difficulty, setDifficulty] = useState(7)
+  const [gameRound, setGameRound] = useState(5)
 
   useEffect(() => {
     if (difficulty === 6) {
@@ -29,10 +30,11 @@ function Wordle_N() {
 
   return (
     <div className="App">
-      <h1>Wordle -  Yiran Wang, Bingfan Tian</h1>
+      <h1 className='title'> Wordle -  Yiran Wang, Bingfan Tian</h1>
       {solution && <Wordle_Game solution={solution} difficulty={difficulty} gameRound = {gameRound}/>}
+      <Link className='back-link' to='/'> Back to home </Link>
     </div>
   )
 }
 
-export default Wordle_N
+export default Wordle_H
