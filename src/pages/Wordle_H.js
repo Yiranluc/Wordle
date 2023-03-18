@@ -32,7 +32,7 @@ function Wordle_H() {
     <div className="App">
       <h1 className='title'> Wordle -  Yiran Wang, Bingfan Tian</h1>
       {solution && <Wordle_Game solution={solution} difficulty={difficulty} gameRound = {gameRound}/>}
-      <Link className='back-link' to='/game'> Back to home </Link>
+      <Link className='back-link' to='/home'> Back to home </Link>
     </div>
   )
 }
