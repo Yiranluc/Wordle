@@ -23,6 +23,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+# Writeup
+
+## What were some challenges you faced while making this app?
+
+
+## Given more time, what additional features, functional or design changes would you make
+
+If given more time, we want to add a game mode that allows the friends of the player to propose a random english word and let the player guess it on our website. It can increase interactivity between friends and add more fun to the game.
+
+## What assumptions did you make while working on this assignment?
+
+
+## How long did this assignment take to complete?
+
+4 days in total.
+
 ## Other Available Scripts
 
 ### `npm test`
