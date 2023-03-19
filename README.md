@@ -47,6 +47,7 @@ You may also see any lint errors in the console.
  - game page (hard / normal mode)
  - restart button
  - rule page
+ - A valid UI design that can both work on mobile and desktop machines
  
 #### About testing:
 When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test. Also, we didn't really import all the words in the dictionary, so some words may be judged as failed validation, you can check the available words in ./dataset/db.json.
