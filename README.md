@@ -1,33 +1,8 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## This Project is deployed on Netlify
 
 You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://main--stellular-heliotrope-3b28b3.netlify.app/home. We also 
 created a json server for storing all the valid English words this game can identify in another [Github repo](https://github.com/Yiranluc/Json-Server). This Json server is deployed to Cyclic and you can see two
 lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/hard) and [normal](https://upset-gold-stockings.cyclic.app/normal) respectively.
-
-## How to run this project locally
-
-In the project directory, run follow scripts:
-
-### `npm install -g json-server`
-Install json server for load English words dictionary.
-
-### `json-server ./dataset/db.json --port 3001`
-Start the json server and load the English words dictionary.
-
-### `npm install`
-Install all relative dependencies.
-
-### `npm run start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000/home](http://localhost:3000/home) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 # Writeup
 ## Some general writeup:
@@ -74,6 +49,28 @@ We assumed that the players in our game know a lot of 6-letter and 7-letter Engl
 ## How long did this assignment take to complete?
 
 1 week in total.
+
+
+## How to run this project locally
+
+In the project directory, run follow scripts:
+
+### `npm install -g json-server`
+Install json server for load English words dictionary.
+
+### `json-server ./dataset/db.json --port 3001`
+Start the json server and load the English words dictionary.
+
+### `npm install`
+Install all relative dependencies.
+
+### `npm run start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000/home](http://localhost:3000/home) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ## Other Available Scripts
 
