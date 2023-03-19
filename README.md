@@ -25,6 +25,14 @@ You may also see any lint errors in the console.
 
 # Writeup
 ## Some general writeup:
+#### Name:
+ - Yiran Wang, Bingfan Tian
+#### Link to deploy:
+
+#### Indicate what bonus points you attempted, if any.
+ - Early Submission
+ - Valid Word Check
+
 #### What we implement:
  - core game logic
  - word validation
