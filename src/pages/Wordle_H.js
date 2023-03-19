@@ -13,13 +13,13 @@ export default function Wordle_H() {
 	}
 
   useEffect(() => {
-      fetch('https://upset-gold-stockings.cyclic.app/hard')
-          .then(res => res.json())
-          .then(json => {
-            // random int between 0 & 14
-            const randomSolution = json[Math.floor(Math.random()*json.length)]
-            setSolution(randomSolution)
-          })
+    fetch('https://upset-gold-stockings.cyclic.app/hard')
+        .then(res => res.json())
+        .then(json => {
+          // random int between 0 & 14
+          const randomSolution = json[Math.floor(Math.random()*json.length)]
+          setSolution(randomSolution)
+        })
   }, [setSolution])
 
   return (
