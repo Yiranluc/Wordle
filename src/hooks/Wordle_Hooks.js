@@ -12,14 +12,14 @@ const useWordle = (solution, difficulty, gameRound) => {
 
   useEffect(() => {
     if (difficulty === 6) {
-      fetch('http://localhost:3001/normal')
+      fetch('https://upset-gold-stockings.cyclic.app/normal')
         .then(res => res.json())
         .then(json => {
           setSolutions(json)
         })
     }
     if (difficulty === 7) {
-      fetch('http://localhost:3001/hard')
+      fetch('https://upset-gold-stockings.cyclic.app/hard')
         .then(res => res.json())
         .then(json => {
           setSolutions(json)
