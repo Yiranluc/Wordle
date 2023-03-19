@@ -35,13 +35,16 @@ You may also see any lint errors in the console.
  - rule page
  
 #### About testing:
-When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test.
+When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test. Also, we didn't really import all the words in the dictionary, so some words may be judged as failed validation, you can check the available words in ./dataset/db.json.
 
 
 ## What were some challenges you faced while making this app?
 For us, the biggest challenge was the game logic and how to pass props between components. Fortunately, one student shared a article about React Hooks in week8 discussion, which provided us with an effective reference. In addition, we have done a lot of research on game logic, and our project has made references to the following:
+
 [references](https://kennethscoggins.medium.com/how-to-build-wordle-using-reactjs-and-about-200-lines-of-sloppy-code-3da3ef47013f)
+
 [references](https://www.youtube.com/watch?v=s-1vuA92RJY)
+
 [references](https://www.reactnativeschool.com/build-a-wordle-clone-with-react-native)
 
 ## Given more time, what additional features, functional or design changes would you make
