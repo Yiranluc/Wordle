@@ -1,7 +1,5 @@
-import './Button.css'
+import React from "react";
 
-function Button(props) {
+export default function Button(props) {
     return <button className="button" onClick={props.onClick}> {props.children} </button>;
 }
-
-export default Button;

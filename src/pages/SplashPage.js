@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Popup from '../components/Popup';
-import './SplashPage.css'
 import Button from '../components/Button';
 
-function SplashPage() {
+export default function SplashPage() {
     const [buttonRules, setButtonRules] = useState(false);
     const [buttonStartGame, setButtonStartGame] = useState(false);
     const navigate = useNavigate();
@@ -63,4 +62,3 @@ function SplashPage() {
         </div>
       )
 }
-export default SplashPage

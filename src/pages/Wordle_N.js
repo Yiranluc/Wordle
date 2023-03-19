@@ -3,7 +3,7 @@ import Wordle_Game from '../components/Wordle_Com'
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button'
 
-function Wordle_N() {
+export default function Wordle_N() {
   const [solution, setSolution] = useState(null)
   const [difficulty, setDifficulty] = useState(6)
   const [gameRound, setGameRound] = useState(6)
@@ -30,5 +30,3 @@ function Wordle_N() {
     </div>
   )
 }
-
-export default Wordle_N

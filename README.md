@@ -2,7 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## How to run this project
+## This Project is deployed on Netlify
+
+You can start playing this game on https://main--dulcet-chebakia-bf3a0f.netlify.app/home. We also 
+created a json server for storing all the valid English words this game can identify in another [Github repo](https://github.com/Yiranluc/Json-Server). This Json server is deployed to Cyclic and you can see two
+lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/hard) and [normal](https://upset-gold-stockings.cyclic.app/normal) respectively.
+
+## How to run this project locally
 
 In the project directory, run follow scripts:
 
@@ -62,6 +68,7 @@ If given more time, we want to add a game mode that allows the player's friends 
 
 ## What assumptions did you make while working on this assignment?
 
+We assumed that the players in our game know a lot of 6-letter and 7-letter English words. Since in our games, we only allow user to enter words with either 6 or 7 letters. And in our word database, we only included around 2000 words in total which can be identified as valid English words. In addition, we did not check if the words we included are rather common or not. It means that players are very likely to be prompted with the message 'the word is not valid' although they entered a valid English word in the game, simply because our database is not huge enough.
 
 ## How long did this assignment take to complete?
 

@@ -24,10 +24,6 @@ export default function Wordle({ solution, difficulty, gameRound }) {
     return () => window.removeEventListener('keyup', userInput)
   }, [userInput])
 
-  // useEffect(() => {
-  //   console.log(round, guesses, isCorrect)
-  // }, [guesses, round, isCorrect])
-
   return (
     <div>
       <h3 className='guess-title'>Current Guess: {currentGuess} </h3>
