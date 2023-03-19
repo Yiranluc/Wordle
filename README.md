@@ -24,20 +24,37 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 # Writeup
+## Some general writeup:
+#### What we implement:
+ - core game logic
+ - word validation
+ - input validation (too lone / too short)
+ - home page
+ - game page (hard / normal mode)
+ - restart button
+ - rule page
+ 
+#### About testing:
+When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test.
+
 
 ## What were some challenges you faced while making this app?
-
+For us, the biggest challenge was the game logic and how to pass props between components. Fortunately, one student shared a article about React Hooks in week8 discussion, which provided us with an effective reference. In addition, we have done a lot of research on game logic, and our project has made references to the following:
+[references](https://kennethscoggins.medium.com/how-to-build-wordle-using-reactjs-and-about-200-lines-of-sloppy-code-3da3ef47013f)
+[references](https://www.youtube.com/watch?v=s-1vuA92RJY)
+[references](https://www.reactnativeschool.com/build-a-wordle-clone-with-react-native)
 
 ## Given more time, what additional features, functional or design changes would you make
 
-If given more time, we want to add a game mode that allows the friends of the player to propose a random english word and let the player guess it on our website. It can increase interactivity between friends and add more fun to the game.
+If given more time, we want to add a game mode that allows the player's friends to propose a random English word and let the player guess it on our website. It can increase interactivity between friends and add more fun to the game. We will also add more styling work. Now our webpage is a bit "plain". Also, the example keyboard with input logging seems like a good idea. Given the extra time, we'll try to implement that keyboard.
+
 
 ## What assumptions did you make while working on this assignment?
 
 
 ## How long did this assignment take to complete?
 
-4 days in total.
+1 week in total.
 
 ## Other Available Scripts
 
