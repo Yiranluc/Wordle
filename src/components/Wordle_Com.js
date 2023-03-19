@@ -30,9 +30,9 @@ export default function Wordle({ solution, difficulty, gameRound }) {
 
   return (
     <div>
-      <h3>Current Guess - {currentGuess}</h3>
-      <Button id='resetButton' onClick={() => window.location.reload(false)}> Restart A Game </Button>
+      <h3 className='guess-title'>Current Guess: {currentGuess} </h3>
       {message && <p className='message'> {message} </p>}
+      <Button id='resetButton' onClick={() => window.location.reload(false)}> Restart A Game </Button>
       <Grid currentGuess = {currentGuess} guesses = {guesses} round = {round} difficulty={difficulty}/>
       {endGame && <End isCorrect = {isCorrect} round = {round} solution = {solution}/>}
     </div>
