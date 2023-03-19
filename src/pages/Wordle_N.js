@@ -8,24 +8,13 @@ function Wordle_N() {
   const [gameRound, setGameRound] = useState(6)
 
   useEffect(() => {
-    if (difficulty === 6) {
-      fetch('http://localhost:3001/normal')
+    fetch('http://localhost:3001/normal')
       .then(res => res.json())
       .then(json => {
         // random int between 0 & 14
         const randomSolution = json[Math.floor(Math.random()*json.length)]
         setSolution(randomSolution)
       })
-    }
-    if (difficulty === 7) {
-      fetch('http://localhost:3001/hard')
-          .then(res => res.json())
-          .then(json => {
-            // random int between 0 & 14
-            const randomSolution = json[Math.floor(Math.random()*json.length)]
-            setSolution(randomSolution)
-          })
-    }
   }, [setSolution])
 
   return (

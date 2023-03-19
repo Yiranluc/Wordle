@@ -3,8 +3,6 @@ import Button from "./Button"
 
 export default function End({isCorrect, round, solution}) {
   
-
-    
     return (
         <div className="endGame">
             {isCorrect && (

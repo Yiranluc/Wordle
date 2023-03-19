@@ -73,9 +73,10 @@ const useWordle = (solution, difficulty, gameRound) => {
     })
     // update round counter
     setRound((preRound) => {
-      return preRound+1
+      return preRound + 1
     })
     // set current guess to empty
+    console.log(solution)
     setCurrentGuess('')
     setMessage('')
   }
