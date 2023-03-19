@@ -13,7 +13,7 @@ export default function Wordle_N() {
 	}
 
   useEffect(() => {
-    fetch('http://localhost:3001/normal')
+    fetch('https://upset-gold-stockings.cyclic.app/normal')
       .then(res => res.json())
       .then(json => {
         // random int between 0 & 14
