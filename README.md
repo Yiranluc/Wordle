@@ -1,3 +1,7 @@
+# Getting Started with Wordle
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ## This Project is deployed on Netlify
 
 You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://main--stellular-heliotrope-3b28b3.netlify.app/home. We also 
