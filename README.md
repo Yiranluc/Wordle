@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## This Project is deployed on Netlify
+## This Project is deployed on Netlify and Vercel
 
-You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://main--stellular-heliotrope-3b28b3.netlify.app/home. We also 
+You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://wordle-bice.vercel.app/home. We also 
 created a json server for storing all the valid English words this game can identify in another [Github repo](https://github.com/Yiranluc/Json-Server). This Json server is deployed to Cyclic and you can see two
 lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/hard) and [normal](https://upset-gold-stockings.cyclic.app/normal) respectively.
 
