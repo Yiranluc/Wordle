@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Popup from '../components/Popup';
 import './SplashPage.css'
 import Button from '../components/Button';
@@ -7,6 +7,14 @@ import Button from '../components/Button';
 function SplashPage() {
     const [buttonRules, setButtonRules] = useState(false);
     const [buttonStartGame, setButtonStartGame] = useState(false);
+    const navigate = useNavigate();
+	const startAHardGame = () => {
+		navigate('/game/hard', {replace: true});
+	}
+    const startANormalGame = () => {
+		navigate('/game/normal', {replace: true});
+	}
+
     return (
         <div className="App">
           <h1>Wordle -  Yiran Wang, Bingfan Tian</h1>
@@ -47,12 +55,8 @@ function SplashPage() {
                 <Popup trigger={buttonStartGame} setTrigger={setButtonStartGame}>
                     <div className='difficulty-div'>
                         <p> Select the difficulty of your game: </p>
-                        <div>
-                            <Link to='/game/hard'> Hard </Link>
-                        </div>
-                        <div>
-                            <Link to='/game/normal'> Normal </Link>
-                        </div>
+                        <Button onClick={startAHardGame}> Hard </Button>
+                        <Button onClick={startANormalGame}> Normal </Button>
                     </div>
                 </Popup>
           </div>

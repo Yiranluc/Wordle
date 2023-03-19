@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react'
 import Wordle_Game from '../components/Wordle_Com'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button'
 
 function Wordle_N() {
   const [solution, setSolution] = useState(null)
   const [difficulty, setDifficulty] = useState(6)
   const [gameRound, setGameRound] = useState(6)
+  const navigate = useNavigate();
+	const backToHome = () => {
+		navigate('/home', {replace: true});
+	}
 
   useEffect(() => {
     fetch('http://localhost:3001/normal')
@@ -21,7 +26,7 @@ function Wordle_N() {
     <div className="App">
       <h1>Wordle -  Yiran Wang, Bingfan Tian</h1>
       {solution && <Wordle_Game solution={solution} difficulty={difficulty} gameRound = {gameRound}/>}
-      <Link className='back-link' to='/home'> Back to home </Link>
+      <Button onClick={backToHome}> Back To Home </Button>
     </div>
   )
 }
