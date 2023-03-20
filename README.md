@@ -3,11 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Deliverables
-## Link to the repo
+## Link to the repo:
 
 https://github.com/Yiranluc/bingfan-tian-yiran-wang-project2
 
-## This project is deployed on Netlify and Vercel
+## This project is deployed on Netlify and Vercel:
 
 You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://wordle-bice.vercel.app/home. We also 
 created a json server for storing all the valid English words this game can identify in another [Github repo](https://github.com/Yiranluc/Json-Server). This Json server is deployed to Cyclic and you can see two
@@ -16,7 +16,7 @@ lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/har
 ## Collaborators:
  - Yiran Wang, Bingfan Tian
 
-## Indicate what bonus points you attempted, if any.
+## Bonus points we attempted:
  - Early Submission
  - Valid Word Check
 
@@ -34,7 +34,7 @@ lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/har
 When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test. Also, we didn't really import all the words in the dictionary, so some words may be judged as failed validation, you can check the available words in ./dataset/db.json.
 
 
-## Writeup
+## Writeup:
 ### What were some challenges you faced while making this app?
 For us, the biggest challenge was the game logic and how to pass props between components. Fortunately, one student shared a article about React Hooks in week8 discussion, which provided us with an effective reference. In addition, we have done a lot of research on game logic, and our project has made references to the following:
 
