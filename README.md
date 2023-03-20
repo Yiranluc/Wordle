@@ -2,23 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Deliverables
+
 ## This Project is deployed on Netlify and Vercel
 
 You can start playing this game on https://main--stellular-heliotrope-3b28b3.netlify.app/home or https://wordle-bice.vercel.app/home. We also 
 created a json server for storing all the valid English words this game can identify in another [Github repo](https://github.com/Yiranluc/Json-Server). This Json server is deployed to Cyclic and you can see two
 lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/hard) and [normal](https://upset-gold-stockings.cyclic.app/normal) respectively.
 
-# Writeup
-## Some general writeup:
-#### Name:
+## Collaborators:
  - Yiran Wang, Bingfan Tian
-#### Link to deploy:
 
-#### Indicate what bonus points you attempted, if any.
+## Indicate what bonus points you attempted, if any.
  - Early Submission
  - Valid Word Check
 
-#### What we implement:
+## What we implement:
  - core game logic
  - word validation
  - input validation (too lone / too short)
@@ -28,18 +27,18 @@ lists of valid English words, [hard](https://upset-gold-stockings.cyclic.app/har
  - rule page
  - A valid UI design that can both work on mobile and desktop machines
  
-#### About testing:
+## About testing:
 When testing our project, you can press F12 to open the browser console to view the answer. Given that we added word validation, there are at least 1000 words in the DB, and your test can be a pain (as we were), so I added this cheat for a quicker test. Also, we didn't really import all the words in the dictionary, so some words may be judged as failed validation, you can check the available words in ./dataset/db.json.
 
 
 ## What were some challenges you faced while making this app?
 For us, the biggest challenge was the game logic and how to pass props between components. Fortunately, one student shared a article about React Hooks in week8 discussion, which provided us with an effective reference. In addition, we have done a lot of research on game logic, and our project has made references to the following:
 
-[references](https://kennethscoggins.medium.com/how-to-build-wordle-using-reactjs-and-about-200-lines-of-sloppy-code-3da3ef47013f)
+[reference 1](https://kennethscoggins.medium.com/how-to-build-wordle-using-reactjs-and-about-200-lines-of-sloppy-code-3da3ef47013f)
 
-[references](https://www.youtube.com/watch?v=s-1vuA92RJY)
+[reference 2](https://www.youtube.com/watch?v=s-1vuA92RJY)
 
-[references](https://www.reactnativeschool.com/build-a-wordle-clone-with-react-native)
+[reference 3](https://www.reactnativeschool.com/build-a-wordle-clone-with-react-native)
 
 ## Given more time, what additional features, functional or design changes would you make
 
